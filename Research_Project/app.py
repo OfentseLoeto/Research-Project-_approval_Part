@@ -1,9 +1,14 @@
 #!/usr/bin/python3
 """Setting up a backend server using pyhton with flask."""
 import os
-from flask import Flask
-from flask import jsonify
+from dotenv import load_dotenv
+from flask import Flask, jsonify, render_template
 import requests
+
+"""This method method load the environment 
+   variables from Git_token.env file
+"""
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -12,7 +17,7 @@ def get_github_data(username):
     token = os.environ.get('GITHUB_ACCESS_TOKEN')
     headers = {'Authorization': f'token {token}'}
     url = f'https://api.github.com/users/{username}'
-    response = request.get(url, headers=headers)
+    response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
         return response.json()
@@ -49,10 +54,10 @@ def get_github_repos(username):
     data = get_github_data(username)
     if data:
         repos_url = data['repos_url']
-        response = requests.get[repos_url]
+        response = requests.get(repos_url)
         repos = response.json()
-        repos_names = [repos['name'] for repo in repos]
-        return jsonify({'username': username, 'repositories': repo_names})
+        repos_names = [repo['name'] for repo in repos]
+        return jsonify({'username': username, 'repositories': repos_names})
     else:
         return jsonify({'error': 'User not found'}), 404
 

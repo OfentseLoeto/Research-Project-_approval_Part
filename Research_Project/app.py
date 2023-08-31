@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Setting up a backend server using pyhton with flask."""
+"""Setting up a backend server using python with flask."""
 import os
 from dotenv import load_dotenv
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, request, render_template
+from utils import some_util_function
 import requests
 
 """This method method load the environment 
@@ -61,5 +62,11 @@ def get_github_repos(username):
     else:
         return jsonify({'error': 'User not found'}), 404
 
+@app.route('/api/data')
+def get_data():
+    """Return some data from the backend as JSON"""
+    data = some_util_function()
+    return jsonify(data)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port='5000')

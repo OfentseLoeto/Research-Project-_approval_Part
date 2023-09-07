@@ -4,7 +4,10 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request, render_template
 from utils import some_util_function
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 import requests
+
 
 """This method method load the environment 
    variables from Git_token.env file
@@ -12,6 +15,10 @@ import requests
 load_dotenv()
 
 app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://ofentse:04035456@localhost/flask_mysql_db'
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 #This function fetches Github data using the provided token
 def get_github_data(username):
@@ -63,10 +70,20 @@ def get_github_repos(username):
         return jsonify({'error': 'User not found'}), 404
 
 @app.route('/api/data')
+
 def get_data():
     """Return some data from the backend as JSON"""
     data = some_util_function()
     return jsonify(data)
+
+@app.route('/create_user')
+
+def create_user():
+    '''Create a new user'''
+    new_user = User(username='ofentse', email='ofentseloeto610@gmail.com')
+    db.session.add(new_user)
+    db.session.commit()
+    return 'User created!'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')

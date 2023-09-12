@@ -1,85 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>GitHub Account Stats Web Service</title>
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>GitHub Account Stats Web Service</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 
-		<style>
-footer a {
-	text-decoration: none;
-	color: #333;
-}
+        </head>
 
-footer a:hover {
-	color: #007bff;
-}
-		</style>
+        <body>
+                <header>
+                        <nav>
+                                <ul>
+                                        <li><a href="#features">Features</a></li>
+                                        <li><a href="#about">About</a></li>
+                                </ul>
+                        </nav>
+                        <a href="https://ofentseloeto.github.io/Research-Project-_approval_Part/" class="btn">Try it now</a>
 
+                </header>
 
-	</head>
+                <!-- Hero Section -->
+                <section class="Home">
+                        <img src="C:\Users\User\Downloads\1218140_github_icon.png" alt="Cover Image" />
+                        <h1 class="page-title">GitHub Account Stats Web Service</h1>
+                        <p class="description">A web service to explore GitHub stats and more.</p>
+                        <a href="https://ofentseloeto.github.io/Research-Project-_approval_Part/" class="btn">Visit project</a>
+                </section>                                                                                                                                          <!-- Feature Section -->
 
-	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#features">Features</a></li>
-					<li><a href="#about">About</a></li>
-				</ul>
-			</nav>
-			<a href="https://ofentseloeto.github.io/Research-Project-_approval_Part/" class="btn">Try it now</a>
+                <section id="features" class="features">
+                        <div class="feature">
+                                <img src="C:\Users\User\Downloads\2124253_home_essential_app_icon.png" alt="Get Stats" />
+                                <h2>Feature 1 </h2>
+                                <p>Get your github stats.</p>
+                        </div>
 
-		</header>
+                        <div class="feature">
+                                <img src="https://iconduck.com/emojis/43731/linkedin?shared" alt="Linkedin Profile" />
+                                <h2>Feature 2 </h2>
+                                <p>View linkedin profile.</p>
+                        </div>
 
-		<!-- Hero Section -->
-		<section class="Home">
-			<img src="https://www.stickpng.com/img/download/63457c5b458f7fedca818679" alt="Cover Image" />
-			<h1>GitHub Account Stats Web Service</h1>
-			<p>A web service to explore GitHub stats and more.</p>
-			<a href="https://ofentseloeto.github.io/Research-Project-_approval_Part/" class="btn">Visit project</a>
-		</section>
+                        <div class="feature">
+                                <img src="https://iconduck.com/icons/19620/home?shared" alt="Home" />
+                                <h2>Feature 3</h2>
+                                <p>Explore github.</p>
+                        </div>                                                                                                                                             </section>
 
-		<!-- Feature Section -->
+                <section id="about" class="about">
+                        <h2>About the project</h2>
+                        <p>Title: Unlocking the GitHub Universe: My Journey as a Holberton Student
+                        Hi tere! I am Ofentse Loeto, a dedicated student at Holberton School, passionate about exploring the world of software engineering. This project, an integral part of my portfolio, emerged from a burning curiosity to delve deeper into the realm of GitHub. I believe in the power of open-source collaboration and wanted to uncover the intricacies of version control, community-driven development, and the sheer magic of GitHub's ecosystem. Through thisproject, i've embarked on the journey to master the art of navigating GitHub's API's. Harnessing data to provide insightful statistics, and empowering developers to understand and enhence their GitHub presence. Join me as we embark on this facinating exploration together.
+                        .</p>
+                        <p><a href="https://github.com/OfentseLoeto/Research-Project-_approval_Part" target="_blank">GitHub Repository</a></p>
+                </section>                                                                                                                                          
+                <footer>
+                        <ul>
+                                <li><a href="https://www.facebook.com/ofentseloeto" target="_blank"><i class="fi fi-brands-facebook"></i>Facebook Profile</a></li>
+                                <li><a href="https://www.linkedin.com/in/ohentse-theophilus-loeto-b968b61a1" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+                        </ul>
+                        <p>Contact: ohentseloeto610@gmail.com</p>
+                        <p>&copy; 2023 Ohentse Loeto</p>
 
-		<section id="features" class="features">
-			<div class="feature">
-				<img src="https://iconduck.com/icons/19610/github?shared" alt="Get Stats" />
-				<h2>Feature 1 </h2>
-				<p>Get your github stats.</p>
-			</div>
+                </footer>
 
-			<div class="feature">
-				<img src="https://iconduck.com/emojis/43731/linkedin?shared" alt="Linkedin Profile" />
-				<h2>Feature 2 </h2>
-				<p>View linkedin profile.</p>
-			</div>
+        </body>
 
-			<div class="feature">
-				<img src="https://iconduck.com/icons/19620/home?shared" alt="Home" />
-				<h2>Feature 3</h2>
-				<p>Explore github.</p>
-			</div>
-		</section>
-
-		<section id="about" class="about">
-			<h2>About the project</h2>
-			<p>Title: Unlocking the GitHub Universe: My Journey as a Holberton Student
-			Hi there! I am Ofentse Loeto, a dedicated student at Holberton School, passionate about exploring the world of software engineering. This project, an integral part of my portfolio, emerged from a burning curiosity to delve deeper into the realm of GitHub. I believe in the power of open-source collaboration and wanted to uncover the intricacies of version control, community-driven development, and the sheer magic of GitHub's ecosystem. Through thisproject, i've embarked on the journey to master the art of navigating GitHub's API's. Harnessing data to provide insightful statistics, and empowering developers to understand and enhence their GitHub presence. Join me as we embark on this facinating exploration together. 
-			.</p>
-			<p><a href="https://github.com/OfentseLoeto/Research-Project-_approval_Part" target="_blank">GitHub Repository</a></p>
-		</section>
-
-		<footer>
-			<ul>
-				<li><a href="https://www.facebook.com/ofentseloeto" target="_blank"><i class="fab fa-facebook"></i>Facebook Profile</a></li>
-				<li><a href="https://www.linkedin.com/ofentsetheophilusloeto" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
-			</ul>
-			<p>Contact: ohentseloeto610@gmail.com</p>
-			<p>&copy; 2023 Ohentse Loeto</p>
-
-		</footer>
-
-	</body>
-
-</html>
+</html> 

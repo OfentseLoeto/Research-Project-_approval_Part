@@ -16,7 +16,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://ofentse:04035456@localhost/flask_mysql_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://ofentse:04035456@localhost/flask_mysql_db'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 

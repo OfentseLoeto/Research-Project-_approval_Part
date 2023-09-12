@@ -1,10 +1,103 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
 
+/* Apply background color and text color to the body */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Style the header */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the logo image */
+header img {
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Style the h1 in the header */
+header h1 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+/* Style the navigation ul */
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* Style the navigation links */
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Style the main content sections */
+section {
+    padding: 20px;
+}
+
+/* Style the page title */
 .page-title {
     font-size: 24px;
-    color: #007bff; /* Blue color */
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.description {
-    font-size: 16px;
-    color: #333; /* Dark gray color */
+/* Style the about section */
+.about {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
+
+/* Style the footer */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the footer links */
+footer ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style the contact information */
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+

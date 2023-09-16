@@ -1,35 +1,24 @@
 body {
-	background-image: url('../static/images/background.png');
-        background-color: #f0f0f0;
-	background-size: cover;
-	background-repeat: no-repeat;
-        font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+}
+
+.container {
+	margin-top: 30px;
 }
 
 h1 {
-        color: #333;
+	color: #343a40;
 }
 
-p {
-        font-size: 16px;
-        line-height: 1.5;
+.btn-primary {
+	background-color: #007bff;
+	border-color: #007bff;
 }
 
-.page-title {
-        font-size: 24px;
-        color: #007bff;
+.btn-primary:hover {
+	background-color: #0056b3;
 }
 
-.description {
-        font-size: 16px;
-        color: #333;
-}
-
-footer a {
-        text-decoration: none;
-        color: #333;
-}
-
-footer a:hover {
-        color: #007bff;
+#results {
+	margin-top: 20px;
 }

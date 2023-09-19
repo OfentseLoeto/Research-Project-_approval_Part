@@ -1,3 +1,4 @@
 # .gitignore
 # Excluding the .env file
 .env
+config.py

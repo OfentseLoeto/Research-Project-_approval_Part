@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Setting up a backend server using python with flask."""
 import os
+from config import DATABASE_URI, EMAIL_USERNAME, EMAIL_PASSWORD
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request, render_template
 from utils import get_github_data
@@ -15,7 +16,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://ofentse:04035456@localhost/flask_mysql_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
@@ -67,8 +68,8 @@ def get_data():
 @app.route('/create_user')
 
 def create_user():
-    # Create a new user'''
-    new_user = User(username='ofentse', email='ofentseloeto610@gmail.com')
+    # Create a new user
+    new_user = User(username=USERNAME, email=EMAIL)
     db.session.add(new_user)
     db.session.commit()
     return 'User created!'

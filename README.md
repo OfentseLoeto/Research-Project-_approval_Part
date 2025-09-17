@@ -9,8 +9,14 @@ The GitHub Account Stats Web Service is a tool desined to provide users with val
 It offers user-friendly interface to access and visualize data related to GitHub activities.
 
 ##Featuers
-1.GitHub Users Statistics: Retrieves and display statistics for GitHub user accounts. These includes, followers, followings, and public repositories.
-2. User Repository List: List repositories owned by a GitHub user
+1.GitHub Users Statistics: Retrieves and display statistics for GitHub user accounts. 
+
+  - These includes
+  - followers
+  - followings
+  - and public repositories.
+2. User Repository List:
+  - List repositories owned by a GitHub user
 
 ##Getting started
 
